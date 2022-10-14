@@ -74,32 +74,27 @@ const cart = document.querySelector('#cart')
 viewProducts ();
  
 
-const tasksArray = JSON.parse(localStorage.getItem("cart")) ?? []; // devuelv e el primer v o el ultimo f
+const tasksArray = JSON.parse(localStorage.getItem("cart")) ?? []; 
 
 createTask();
 
 const productsButton = document.querySelectorAll(".button-one");  
 
 productsButton.forEach(button => {
-  button.addEventListener('click', (e) => {
+  button.addEventListener('click', () => {
     const id = parseInt(button.getAttribute('data-id'))
-    console.log(id);
-    if(items.id == id ){
-      tasksArray.push( { id: items.id, name: items.name, price: items.price, image: items.image, quantity: items.quantity});
-      console.log(tasksArray);
-      localStorage.setItem("cart", JSON.stringify(tasksArray));
-      createTask();
+    for(let i = 0; i < items.length; i++){
+      if(items[i].id == id ){
+      console.log(items[i].id);
+      tasksArray.push( { id: items[i].id, name: items[i].name, price: items[i].price, image: items[i].image, quantity: items[i].quantity});
+      console.log(tasksArray); 
     }
+    }
+    localStorage.setItem("cart", JSON.stringify(tasksArray));
+       createTask();
   })
 })
 
-
-
-  //   console.log(addButton);
-//   //tasksArray.push({ title, description, complete: false });
-//   localStorage.setItem("products", JSON.stringify(tasksArray));
-//   createTask();
-// });
 
 function createTask() {
   const taskArea = document.querySelector(".cart-container");
