@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Solutions Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,300;8..144,400;8..144,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="desktop-menu">
+            <div class="nav-small">
+                <a href="#">Home</a>
+                <a href="#" class="btn">Products</a>
+              </div>      
+              <div class="nav-shop" id="icon-shop">
+                  <i class='bx bx-shopping-bag'></i>
+                  <span id="cart-count" class="count"></span>
+              </div>
+        </nav>
+        <div class="mobile-menu">
+            <span class="material-symbols-outlined"> menu </span>
+          </div>
+        </nav>
+    </header>
+    <!--==================== CART ====================-->
+  <div class="cart" id="cart">
+    <i class='bx bx-x cart-close'></i>
+         <h2 class="cart-title">Carrito</h2>
+         <div class="cart-container">
+
+            
+         </div>
+        <div class="cart-prices">
+            <span class="prices-item"><span id="items-count"></span> items</span>
+            <span class="prices-total" id="cart-total"></span>
+        </div>
+    <div class="cart-sales">
+      <button class="button sale-btn" id="cart-checkout" disabled><i class='bx bxs-check-shield'></i> Checkout</button>
+     </div>
+  </div>
+    <main class="main">  
+        <section class="home" id="home">
+                <div class="container-img">     
+                    <img src="./img/featured2.png" alt="" class="home__img">
+                </div> 
+                <div class="container-desciption">
+                    <h1 class="home-title">#1 en Tecnologia <br> IMPORTADORES AUTORIZADOS</h1>
+                    <p class="home-p">
+                    Todo lo que buscas en tecnologia, la mejor calidad y precios .
+                    </p>
+                    <a href="#cards" class="buy-btn">Comprar ahora</a>
+                </div>
+        </section>
+    </main>
+    <section id="cards" class="cards-products">
+        <h1>STORE</h1>
+        <div class="cards-container"></div>
+    </section>
+    <footer >
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3 class="footer-title">Our information</h3>
+                <ul class="footer-list">
+                <li>Quito - Ecuador</li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3 class="footer-title">Contact us</h3>
+    
+            <ul class="footer-links">
+              <li>
+                <a href="#" class="footer-link">javicho16_mu@hotmail.com</a>
+              </li>
+              <li>
+                <a href="#" class="footer-link">+593 980594828</a>
+              </li>
+            </ul>
+            </div>
+            <div class="footer-content">
+                <h3 class="footer-title">Product</h3>
+    
+                <ul class="footer-links">
+                  <li>
+                    <a href="#" class="footer-link">Laptops</a>
+                  </li>
+                  <li>
+                    <a href="#" class="footer-link">Desktops</a>
+                  </li>
+                  <li>
+                    <a href="#" class="footer-link">graphics cards</a>
+                  </li>
+                </ul>
+            </div>
+            <div class="footer-content">
+                <h3 class="footer-title">Social</h3>
+    
+                <ul class="footer-social">
+                  <a href="https://www.facebook.com/" target="_blank" class="footer-social-link">
+                    <i class='bx bxl-facebook'></i>
+                  </a>
+        
+                  <a href="https://twitter.com/" target="_blank" class="footer-social-link">
+                    <i class='bx bxl-linkedin'></i>
+                  </a>
+        
+                  <a href="https://www.instagram.com/" target="_blank" class="footer-social-link">
+                    <i class='bx bxl-instagram'></i>
+                  </a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src="./app.js"></script>
+</html>
