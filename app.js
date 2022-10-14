@@ -105,9 +105,7 @@ function productList() {
           <div class="cart__details">
             <h3 class="cart__title">${task.name}</h3>
             <span class="cart__stock">Stock: ${task.quantity} | <span class="cart__price">${task.price}</span></span>
-            <span class="cart__subtotal">
-              Subtotal: ${task.quantity * task.price}
-            </span>
+           
   
             <div class="cart__amount">
               <div class="cart__amount-content">
@@ -133,13 +131,13 @@ function productList() {
 const cartCount = document.getElementById('cart-count')
 const itemsCount = document.getElementById('items-count')
 const minusItems = document.querySelectorAll('.minus')
-const plusItems = document.querySelectorAll('.plus')
-const totalContainer = document.getElementById('cart-total')
-const checkoutButton = document.getElementById('cart-checkout')
+const plusItems = document.querySelectorAll('.plus');
+const totalContainer = document.getElementById('cart-total');
+const checkoutButton = document.getElementById('cart-checkout');
 //const deleteButtons = document.querySelector('.cart__amount-trash')
 
 
-const cartArea = document.querySelector('.cart__card');
+const cartArea = document.querySelector('.cart');
 
 
 
@@ -149,44 +147,20 @@ cartArea.addEventListener("click", (e) => {
 
   console.log(cartArea);
 
+
   if (e.target.classList.contains("cart__amount-trash")) {
-    // lo único que necesitamos para eliminar una tarea
-    // es el id
     const taskId = e.target.getAttribute("data-id");
     const newTasks = tasksArray.filter((task) => task.id !== Number(taskId));
     tasksArray = [...newTasks];
     console.log(tasksArray);
-   // createTask();
-    //deleteTask({ id: taskId });
+    productList();
   }
-  if (e.target.classList.contains("btn-complete")) {
-    const taskId = e.target.getAttribute("id");
+  if (e.target.classList.contains("btn-plus")) {
+    const taskId = e.target.getAttribute("data-id");
     // const index = tasksArray.findIndex((task) => task.id === Number(taskId));
     // tasksArray[index].complete = true;
     // createTask();
     updateTask(taskId);
   }
 });
-
-
-
-// deleteButtons.addEventListener("click", (e) => {
-// console.log("tengo el click")
-// });
-
-// // deleteButtons.forEach(button => {
-// //   button.addEventListener('click', () => {
-// //     const id = parseInt(button.getAttribute('data-id'))
-// //     console.log(id)
-// //     trash(id);
-// //     localStorage.setItem("cart", JSON.stringify(tasksArray));
-// //   });
-  
-// // });
-
-// function trash (e) {
-//   const newArray = tasksArray.filter((items)=> items.id !== e);
-//   tasksArray = [...newArray];
-// }
-
 
