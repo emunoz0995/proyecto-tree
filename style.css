@@ -66,10 +66,15 @@ html {
   }
     
   .desktop-menu {
-    background-color:transparent;
+    background-color:var(--first-color);
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     justify-content: space-between;
-    padding:20px 155px 20px 136px;
+    padding:20px 237px 20px 202px;
+    transition: .3s;
   }
   
   @media (max-width: 480px) {
@@ -98,11 +103,11 @@ html {
     margin-left: 15px;
   }
   .nav-small a:hover{
-    color: var(--first-color);
+    color: var(--container-color);
   }
   
   .bx-shopping-bag:hover{
-    color: var(--first-color);
+    color: var(--container-color);
   }
   .nav-small img{
     width: 20px;
@@ -293,6 +298,7 @@ html {
 
 main{
     height: 100vh;
+    margin-top: 79px;
 }
 /*HOME*/
 
@@ -310,13 +316,13 @@ main{
 }
 .home-p{
     font-size: 18px;
-   
+   margin-bottom: 70px;
     text-align: right;
 }
 
 .container-img img{
     margin: 1px;
-    width: 500px;
+    width: 589px;
    padding-top: 20px;
 }
 .container-desciption{
@@ -343,7 +349,7 @@ article {
     width: 100%;
     height: 300px;
     background-color: #fff;
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 1px 10px 0px var(--first-color);
   }
   
   .article-image {
@@ -379,6 +385,7 @@ article {
     text-align: center;
   }
   .cards-products{
+    margin-top: 30px;
     height: 100vh;
   }
   .cards-products h1{
